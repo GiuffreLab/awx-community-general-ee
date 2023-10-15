@@ -8,9 +8,9 @@ This environment only has the dependencies for `Proxmox` nodes (`proxmoxer` and 
 
 If you want to add other python packages, just add them to `requirements.txt` and build the image.
 
-The compiled version of this is hosted on docker hub [Here](https://hub.docker.com/r/giuffrelab/awx-community-general-ee)
+The compiled version of this is hosted on docker hub [Check Here](https://hub.docker.com/r/giuffrelab/awx-community-general-ee) and can be used directly in your AWX environment.
 
-If you wish to learn how to build Execution Environments, [Check Here](https://github.com/GiuffreLab/building-execution-environments)
+If you wish to learn how to build Execution Environments, [Check Here](https://github.com/GiuffreLab/building-execution-environments).
 
 **Add the new Execution Environment**
 
