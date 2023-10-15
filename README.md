@@ -1,4 +1,4 @@
-# Ansible AWX-Operator Juniper Execution Environment
+# Ansible AWX-Operator Community.General Collection Execution Environment
 
 This is a repo to build an Ansible Execution Environment that can communicate with hosts using the `community.general` collection.
 
