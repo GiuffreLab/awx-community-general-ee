@@ -45,7 +45,7 @@ Enter your username and password.
 
 **Building the Image**
 
-run the following command to complie the image. the `-v 3` at the end is for the verbosity. If you do not care about this run it without it. Levels of verbosity are 1-3.
+run the following command to compile the image. the `-v 3` at the end is for the verbosity. If you do not care about this run it without it. Levels of verbosity are 1-3.
 
 ```
 ansible-builder build --tag giuffrelab/awx-community-general-ee -v 3
