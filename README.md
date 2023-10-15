@@ -22,6 +22,9 @@ The following files need to be in the same folder
 `execution-environment.yml`
 `requirements.txt`
 
+As I mainly built this to use only for managing `Proxmox`, the `requirements.txt` file only has what it needs for it to work with those kinds of hosts. 
+If you want to enhance it for some of the many other roles within the `community.general` collection, just add the additional python packages you need to `requirements.txt`.
+
 You will then need to run the `ansible-builder` script to compile the image. 
 
 Things you will want to have ahead of time is information about your container registration and the names and tags you wish to use.
