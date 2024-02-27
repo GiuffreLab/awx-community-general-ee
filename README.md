@@ -20,6 +20,6 @@ Under `Administration` and `Execution Environments`
 - Select `Add`
 - Fill out the `name` field
 - Under Pull select `Always Pull`
-- Under image put `giuffrelab/awx-community-general-ee:latest`
+- Under image put `giuffrelab/awx-community-general-ee:tagname`
 - Under `Registry credential` select the one created above
 - `Save`
