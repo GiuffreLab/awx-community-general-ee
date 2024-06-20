@@ -2,7 +2,7 @@
 
 This is a repo to build an Ansible Execution Environment that can communicate with hosts using various `ansible-galaxy` collections.
 
-This environment only has the dependencies as noted in the `requirements.txt` file. For a complete list and versions, see the docker hub link.
+This environment only has the dependencies as noted in the `requirements` files. For a complete list and versions, see the docker hub link.
 
 If you want to add other python packages or collections, just add them to `requirements.txt` or `requirements.yml` and build the image.
 
