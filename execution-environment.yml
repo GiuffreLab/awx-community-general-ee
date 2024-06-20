@@ -1,0 +1,41 @@
+---
+version: 3
+images:
+  base_image:
+    name: quay.io/centos/centos:stream9
+dependencies:
+  ansible_core:
+    package_pip: ansible-core
+  ansible_runner:
+    package_pip: ansible-runner
+  python_interpreter:
+    package_system: "python3"
+    python_path: "/usr/bin/python3"
+  galaxy: requirements.yml
+  python: requirements.txt
+images:
+  base_image:
+    name: quay.io/centos/centos:stream9
+additional_build_steps:
+  prepend_base:
+    - RUN yum -y install epel-release libicu rsync
+    - RUN yum -y remove vim-minimal
+    - RUN yum -y update && yum -y upgrade && yum clean all && rm -rf /var/cache/yum
+    - RUN yum -y install python3-pip sshpass
+    - RUN /usr/bin/python3 -m pip install --upgrade pip --no-cache-dir
+  append_base:
+    - RUN yum -y install openssh-clients wget tar gzip
+    - RUN yum -y remove python3-cryptography
+    - RUN wget -O /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/powershell-7.4.1-linux-x64.tar.gz
+    - RUN mkdir -p /opt/microsoft/powershell/7
+    - RUN tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
+    - RUN chmod +x /opt/microsoft/powershell/7/pwsh
+    - RUN ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
+  append_final:
+    - RUN pwsh -Command "Install-Module -Name Az -AllowClobber -Force -Scope AllUsers"
+    - RUN rm -rf /root/.cache/pip/*
+    - RUN pip list installed
+    - RUN yum list installed
+    - RUN ansible --version
+    - RUN pwsh --version
+    - RUN ansible-galaxy collection list
