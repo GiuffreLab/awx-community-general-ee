@@ -1,0 +1,14 @@
+---
+collections:
+  - name: community.docker
+  - name: kubernetes.core
+  - name: ansible.netcommon
+  - name: ansible.utils
+  - name: awx.awx
+  - name: community.general
+  - name: juniper.device
+  - name: junipernetworks.junos
+  - name: ansible.windows
+  - name: azure.azcollection
+  - name: microsoft.ad
+  - name: microsoft.sql
