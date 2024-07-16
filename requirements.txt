@@ -24,3 +24,4 @@ azure-storage-blob
 ansible[azure]
 pyTenable
 axonius-api-client
+setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
