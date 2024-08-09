@@ -12,3 +12,4 @@ collections:
   - name: azure.azcollection
   - name: microsoft.ad
   - name: microsoft.sql
+  
