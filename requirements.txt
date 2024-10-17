@@ -5,7 +5,6 @@ docker
 netmiko
 napalm
 pyez
-paramiko
 numpy
 pandas
 pyserial
