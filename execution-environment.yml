@@ -13,9 +13,6 @@ dependencies:
     python_path: "/usr/bin/python3"
   galaxy: requirements.yml
   python: requirements.txt
-images:
-  base_image:
-    name: quay.io/centos/centos:stream9
 additional_build_steps:
   prepend_base:
     - RUN yum -y install epel-release libicu rsync
